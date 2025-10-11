@@ -35,13 +35,8 @@ body.dark {
 
   --container-max-width: #{$container-max-width};
   --avatar-size: #{$avatar-size};
-  --border-radius-sm: #{$border-radius-sm};
-  --border-radius-md: #{$border-radius-md};
-  --border-radius-lg: #{$border-radius-lg};
-  --border-radius-circle: #{$border-radius-circle};
-  --skill-bar-height: #{$skill-bar-height};
-  --portfolio-img-height: #{$portfolio-img-height};
-  --logo-height: #{$logo-height};
+  --border-radius: #{$border-radius};
+
 
   --shadow-light: #{$shadow-light};
   --shadow-medium: #{$shadow-medium};

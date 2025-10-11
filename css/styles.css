@@ -113,6 +113,52 @@ input[type=checkbox]:checked {
   }
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-modal-overlay);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--color-primary);
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-secondary);
+  transition: color 0.2s ease;
+}
+.modal-close:hover {
+  color: var(--color-accent);
+}
+
+.input-group {
+  display: flex;
+  gap: 0.8rem;
+}
+
 .tasksContainer {
   width: 500px;
   display: flex;
@@ -182,13 +228,7 @@ body.dark {
   --spacing-4xl: 4rem;
   --container-max-width: 1200px;
   --avatar-size: 200px;
-  --border-radius-sm: 5px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 20px;
-  --border-radius-circle: 50%;
-  --skill-bar-height: 10px;
-  --portfolio-img-height: 200px;
-  --logo-height: 30px;
+  --border-radius: 10px;
   --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-heavy: 0 5px 15px rgba(0, 0, 0, 0.1);

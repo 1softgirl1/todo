@@ -5,7 +5,7 @@ document.querySelector('[data-switch-dark]').addEventListener('click', function(
 
 // Получаем элементы
 const addButton = document.getElementById('addButton');
-const searchInput = document.getElementById('searchInput');
+const taskInput = document.getElementById('taskInput');
 const tasksContainer = document.getElementById('tasksContainer');
 const taskCount = document.getElementById('taskCount');
 const doneCount = document.getElementById('doneCount');
@@ -19,7 +19,7 @@ renderTasks();
 
 // Добавление задачи
 addButton.addEventListener('click', () => {
-    const text = searchInput.value.trim();
+    const text = taskInput.value.trim();
     if (text === '') return;
 
     const task = {
@@ -31,7 +31,7 @@ addButton.addEventListener('click', () => {
     tasks.push(task);
     localStorage.setItem('tasks', JSON.stringify(tasks));
 
-    searchInput.value = '';
+    taskInput.value = '';
     renderTasks();
 });
 
