@@ -3,6 +3,7 @@
 
 
 .tasksContainer{
+  color: var(--color-accent);
   width: 500px;
   @include flex-center(column, $spacing-sm);
   align-items: flex-start;

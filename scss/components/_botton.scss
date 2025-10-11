@@ -20,6 +20,21 @@
     padding: var(--spacing-xs) var(--spacing-sm);
   }
 }
+#searchButton, #createTaskButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+  }
+}
+
+
+
 
 .delete {
   background: none;

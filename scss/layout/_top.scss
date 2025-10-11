@@ -25,3 +25,10 @@
     align-items: center;
   }
 }
+
+.form {
+  width: 500px;
+  @include flex-center(row, 0.5rem);
+  justify-content: space-between;
+
+}
