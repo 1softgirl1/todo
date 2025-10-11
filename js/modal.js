@@ -8,7 +8,7 @@ $('#createTaskButton').click(function() {
 });
 
 $('#modal-close').click(function() {
-    $('#formModal').fadeOut(300); // скрыть окно
+    $('#formModal').fadeOut(300);
 });
 
 $(document).keydown(function(e) {
@@ -18,7 +18,8 @@ $(document).keydown(function(e) {
 });
 
 $('#addButton').click(function() {
-    $('#formModal').fadeOut(300); // скрыть окно
+    $('#formModal').fadeOut(300);
 });
 
 $('#addButton').text( 'Add');
+

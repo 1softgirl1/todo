@@ -8,10 +8,8 @@ body.dark {
   --color-accent-hover: #{$accent-hover};
   --color-success: #{$success-color};
   --color-background: #{$dark-background};
-  --color-border: #{$dark-border-color};
-  --color-shadow: #{$dark-shadow-color};
-  --color-modal-overlay: #{$dark-modal-overlay};
-  --color-text-muted: #{$dark-text-muted};
+  --color-text-muted: #{$text-muted};
+
 
   --font-primary: #{$font-primary};
   --font-weight-normal: #{$font-weight-normal};
@@ -30,8 +28,6 @@ body.dark {
   --spacing-xl: #{$spacing-xl};
   --spacing-4xl: #{$spacing-4xl};
 
-  --container-max-width: #{$container-max-width};
-  --avatar-size: #{$avatar-size};
   --border-radius: #{$border-radius};
 
 
@@ -54,6 +50,8 @@ body.dark {
   --button-padding: var(--spacing-xs) var(--spacing-md);
   --button-font-size: var(--font-size-sm);
   --button-transition: background-color var(--transition-fast);
+
+  --icon-theme: url(#{$sun});
 
 }
 

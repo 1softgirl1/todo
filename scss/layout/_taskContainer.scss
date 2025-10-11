@@ -5,7 +5,7 @@
 .tasksContainer{
   color: var(--color-accent);
   width: 500px;
-  @include flex-center(column, $spacing-sm);
+  @include flex-center(column);
   align-items: flex-start;
 
   margin-left: auto;
@@ -28,7 +28,6 @@
   padding-top: $spacing-md;
   @include flex-center(column, $spacing-sm);
   align-items: flex-start;
-
   margin-left: auto;
   margin-right: auto;
 }

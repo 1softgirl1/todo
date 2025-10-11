@@ -11,3 +11,7 @@ input {
   color: var(--color-secondary);
   background: var(--color-primary);
 }
+
+::placeholder {
+  color: var(--color-text-muted);
+}

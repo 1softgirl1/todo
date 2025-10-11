@@ -6,11 +6,9 @@
   padding-top: 159px;
   width: 500px;
 
-  // Используем миксин для центрирования
   @include flex-center(column, $spacing-sm);
   align-items: flex-start;
 
-  // Центрирование самого контейнера
   margin-left: auto;
   margin-right: auto;
 
@@ -24,6 +22,7 @@
     max-width: 432px;
     align-items: center;
   }
+  margin-bottom: $spacing-md;
 }
 
 .form {

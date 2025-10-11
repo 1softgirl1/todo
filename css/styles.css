@@ -14,7 +14,7 @@ body {
 
 .button {
   background: var(--button-background, var(--color-accent));
-  color: var(--color-secondary);
+  color: #ffffff;
   padding: var(--button-padding, var(--spacing-xs) var(--spacing-xs));
   border-radius: 10px;
   height: 40px;
@@ -62,6 +62,32 @@ body {
   cursor: pointer;
 }
 
+#theme {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  background: var(--icon-theme) no-repeat center;
+  background-size: cover;
+}
+@media (max-width: 600px) {
+  #theme {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
 .task-card {
   display: flex;
   flex-direction: row;
@@ -91,6 +117,10 @@ input {
   font-size: 16px;
   color: var(--color-secondary);
   background: var(--color-primary);
+}
+
+::placeholder {
+  color: var(--color-text-muted);
 }
 
 .actions {
@@ -150,6 +180,9 @@ input[type=checkbox]:checked {
     max-width: 432px;
     align-items: center;
   }
+}
+.top {
+  margin-bottom: 1rem;
 }
 
 .form {
@@ -215,7 +248,7 @@ input[type=checkbox]:checked {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0;
   align-items: flex-start;
   margin-left: auto;
   margin-right: auto;
@@ -252,13 +285,10 @@ body.dark {
   --color-primary: #0D0714;
   --color-secondary: #ffffff;
   --color-accent: #9E78CF;
-  --color-accent-hover: #3E1671;
+  --color-accent-hover: rgba(62, 22, 113, 0.75);
   --color-success: #78CFB0;
   --color-background: #15101C;
-  --color-border: #333;
-  --color-shadow: rgba(0, 0, 0, 0.7);
-  --color-modal-overlay: rgba(0, 0, 0, 0.8);
-  --color-text-muted: #bbb;
+  --color-text-muted: #999;
   --font-primary: Inter, sans-serif;
   --font-weight-normal: 400;
   --font-size-base: 1rem;
@@ -273,8 +303,6 @@ body.dark {
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-4xl: 4rem;
-  --container-max-width: 1200px;
-  --avatar-size: 200px;
   --border-radius: 10px;
   --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -292,6 +320,38 @@ body.dark {
   --button-padding: var(--spacing-xs) var(--spacing-md);
   --button-font-size: var(--font-size-sm);
   --button-transition: background-color var(--transition-fast);
+  --icon-theme: url(/src/sun.png);
+}
+
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: rgba(62, 22, 113, 0.75);
+  --color-accent: #9E78CF;
+  --color-accent-hover: rgba(62, 22, 113, 0.75);
+  --color-success: #78CFB0;
+  --color-background: #f2ecf8;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-modal-overlay: rgba(0, 0, 0, 0.5);
+  --color-text-muted: rgba(62, 22, 113, 0.75);
+  --font-primary: Inter, sans-serif;
+  --font-weight-normal: 400;
+  --font-size-base: 1rem;
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 0.9rem;
+  --font-size-lg: 1.1rem;
+  --font-size-xl: 1.05rem;
+  --font-size-xxl: 0.95rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.8rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-4xl: 4rem;
+  --border-radius: 10px;
+  --breakpoint-mobile: 767px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --icon-theme: url(/src/moon.png);
 }
 
 /*# sourceMappingURL=styles.css.map */
