@@ -2,8 +2,6 @@
 @use '../utils/mixins' as *;
 
 
-
-
 .tasksContainer{
   width: 500px;
   @include flex-center(column, $spacing-sm);

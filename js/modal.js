@@ -1,10 +1,9 @@
-const createTaskButton = document.querySelector('.createTaskButton');
 
 $('#createTaskButton').click(function() {
     $('#formModal')
-        .css('display', 'flex')  // показываем как flex-контейнер
-        .hide()                  // сразу скрываем (чтобы fadeIn работал)
-        .fadeIn(300);            // плавно показываем
+        .css('display', 'flex')
+        .hide()
+        .fadeIn(300);
 
 });
 
@@ -12,7 +11,6 @@ $('#modal-close').click(function() {
     $('#formModal').fadeOut(300); // скрыть окно
 });
 
-// Закрытие модального окна по ESC
 $(document).keydown(function(e) {
     if (e.key === "Escape") {
         $('.modal').fadeOut(300);
@@ -22,3 +20,5 @@ $(document).keydown(function(e) {
 $('#addButton').click(function() {
     $('#formModal').fadeOut(300); // скрыть окно
 });
+
+$('#addButton').text( 'Add');
