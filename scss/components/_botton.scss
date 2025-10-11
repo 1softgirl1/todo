@@ -1,0 +1,30 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.button  {
+  background: var(--button-background, var(--color-accent));
+  color: var(--color-secondary);
+  padding: var(--button-padding, var(--spacing-xs) var(--spacing-xs));
+  border-radius: 10px;
+  height: 40px;
+  font-size: var(--button-font-size, var(--font-size-sm));
+  transition: var(--button-transition, background-color var(--transition-fast));
+  border: none;
+
+  &:hover {
+    background: var(--color-accent-hover);
+  }
+
+  @include respond-to(mobile) {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+button.delete {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 18px;
+  cursor: pointer;
+}

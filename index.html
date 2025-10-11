@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <section class="top">
+            <div id="searchTask" class="form">
+                <label>
+                    <input id="taskInput" type="text" placeholder="Search task"/>
+                </label>
+                <button id="searchButton" class="button">Найти</button>
+            </div>
+            <div id="addTask" class="form">
+                <label>
+                    <input id="searchInput" type="text" placeholder="Add a new task"/>
+                </label>
+                <button id="addButton" class="button" >+</button>
+            </div>
+            <button class="switch" data-switch-dark aria-hidden>Night mode</button>
+        </section>
+        <section id="taskToDo" class="tasks">
+            <p>Task to do - <span id="taskCount">0</span></p>
+            <div id="tasksContainer" class="tasksContainer">
+            </div>
+        </section>
+        <section id="doneTasks" class="tasks">
+            <p>Done - <span id="doneCount">0</span></p>
+            <div id="doneTasksContainer" class="tasksContainer">
+
+            </div>
+        </section>
+    </main>
+
+</body>
+<script src="js/script.js"></script>
+</html>
