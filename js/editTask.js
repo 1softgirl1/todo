@@ -8,8 +8,7 @@ function editTask(id) {
     $('#addButton').text('Edit');
     $('#modal-text').text('Edit Task');
 
-    $('#formModal')
-        .css('display', 'flex')
-        .hide()
-        .fadeIn(300);
+    modal.style.display = 'flex';
+
+    $('#formModal').fadeIn(300);
 }

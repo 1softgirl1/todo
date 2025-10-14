@@ -18,9 +18,11 @@
   }
 
   @include respond-to(mobile) {
-    width: 100%;
-    max-width: 432px;
+    max-width: 320px;
     align-items: center;
+    padding-top: 100px;
+    padding-left: $spacing-sm;
+    padding-right: $spacing-sm;
   }
   margin-bottom: $spacing-md;
 }
@@ -29,5 +31,13 @@
   width: 500px;
   @include flex-center(row, 0.5rem);
   justify-content: space-between;
+
+  @include respond-to(tablet) {
+    max-width: 432px;
+  }
+
+  @include respond-to(mobile) {
+    max-width: 320px;
+  }
 
 }

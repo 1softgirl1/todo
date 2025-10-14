@@ -24,6 +24,8 @@ closeModal.addEventListener('click', () => {
 });
 
 addButton.addEventListener('click', () => {
+    $('#addButton').text('Add');
+    $('#modal-text').text('Add Task');
     const text = taskInput.value.trim();
     if (text === '') return;
 
@@ -35,7 +37,7 @@ addButton.addEventListener('click', () => {
             text: text,
             done: false,
         };
-        tasks.push(task);
+        tasks.unshift(task);
         localStorage.setItem('tasks', JSON.stringify(tasks));
         renderTasks();
     }
@@ -99,6 +101,16 @@ function toggleTask(id) {
 
 function deleteTask(id) {
     tasks = tasks.filter(task => task.id !== id);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    renderTasks();
+}
+function updateExistingTask(id, newText) {
+    tasks = tasks.map(task => {
+        if (task.id === id) {
+            task.text = newText;
+        }
+        return task;
+    });
     localStorage.setItem('tasks', JSON.stringify(tasks));
     renderTasks();
 }
