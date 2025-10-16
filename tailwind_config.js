@@ -8,7 +8,8 @@ tailwind.config = {
             "accent-hover": "var(--color-accent-hover)",
             "color-background": "var(--color-background)",
             "color-success": "var(--color-success)",
-            "text-muted": "var(--color-text-muted)"
+            "text-muted": "var(--color-text-muted) "
+
         },
         extend: {
             fontFamily: {
