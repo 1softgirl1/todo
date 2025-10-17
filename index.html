@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --color-primary: #ffffff;
+            --color-secondary: #3E1671BF;
+            --color-accent: #9E78CFFF;
+            --color-accent-hover: #3e1671bf;
+            --color-background: #F2ECF8FF;
+            --color-text-muted: #9e78cf;
+            --color-modal-overlay: rgba(0, 0, 0, 0.5);
+            --color-success: #78cfb0;
+            --icon-theme: "/src/moon.png";
+        }
+
+        [data-theme="dark"] {
+            --color-primary: #0d0714;
+            --color-secondary: #ffffff;
+            --color-accent: #9e78cf;
+            --color-accent-hover: #3e1671bf;
+            --color-background: #15101c;
+            --color-text-muted: #999999FF;
+            --color-modal-overlay: rgba(0, 0, 0, 0.5);
+            --color-success: #78cfb0;
+            --icon-theme: "/src/sun.png";
+        }
+
+        .delete-btn {
+            color: red !important;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+    </style>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn {
+                @apply bg-accent text-[#ffffff] px-3 py-2 rounded-xl hover:bg-accent-hover transition;
+            }
+            .input {
+                @apply w-full h-10 px-3 py-2 rounded-xl border border-accent
+                text-secondary bg-primary placeholder:text-text-muted
+                focus:ring-2 transition;
+            }
+            button#themeToggle {
+                background-color: transparent;
+                @apply p-0 rounded-none;
+            }
+
+            .content-container {
+                @apply w-full max-w-full px-3 sm:px-4 sm:max-w-[500px] mx-auto;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body class="bg-primary text-secondary min-h-screen transition-colors duration-300 font-normal font-custom" data-theme="light">
+
+<main class="w-full">
+    <section class="content-container pt-16 sm:pt-24 mb-6 ">
+        <div id="searchTask" class="flex w-full gap-2">
+            <label class="flex-1 min-w-0">
+                <input id="searchInput" type="text" placeholder="Search task" class="input" />
+            </label>
+            <button id="searchButton" class="btn flex-shrink-0 flex items-center justify-center h-10 w-10 p-2">
+                <img class="w-5 h-5 sm:w-6 sm:h-6" src="src/magnifier_white.png" alt="Search" />
+            </button>
+            <button id="createTaskButton" class="btn flex-shrink-0 flex items-center justify-center h-10 w-10 p-2">
+                <img class="w-5 h-5 sm:w-6 sm:h-6" src="src/plus.svg" alt="Add Task" />
+            </button>
+        </div>
+
+        <div class="hidden fixed inset-0 w-full h-full bg-[var(--color-modal-overlay)] z-[1000] flex items-center justify-center px-3 sm:px-4" id="formModal">
+            <div class="bg-primary w-full max-w-full sm:max-w-[500px] p-4 sm:p-6 rounded-2xl relative">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="modal-text" class="text-lg sm:text-xl">Add new task</h3>
+                    <button id="modal-close" class="absolute top-3 right-3 sm:top-4 sm:right-4 bg-transparent text-xl sm:text-2xl text-secondary cursor-pointer hover:text-accent transition">&times;</button>
+                </div>
+                <div class="modal-body flex flex-col sm:flex-row gap-2 sm:gap-3">
+                    <input class="input flex-1 min-w-0" id="taskInput" type="text" placeholder="Add task" required />
+                    <button id="addButton" class="btn w-full sm:w-auto px-4">Add</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="taskToDo" class="content-container py-4 flex flex-col gap-3">
+        <p class="text-sm sm:text-base">Task to do - <span id="taskCount">0</span></p>
+        <div id="tasksContainer" class="w-full flex flex-col gap-2"></div>
+    </section>
+
+    <section id="doneTasks" class="content-container py-4 flex flex-col gap-3">
+        <p class="text-sm sm:text-base">Done - <span id="doneCount">0</span></p>
+        <div id="doneTasksContainer" class="w-full flex flex-col gap-2"></div>
+    </section>
+
+    <button id="themeToggle" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 border-none cursor-pointer bg-transparent bg-no-repeat bg-center bg-cover bg-[url('/src/moon.png')] dark:bg-[url('/src/sun.png')] opacity-80 hover:opacity-100 transition-opacity"></button>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/createTask.js"></script>
+<script src="js/search.js"></script>
+<script src="js/editTask.js"></script>
+<script src="js/switchThemes.js"></script>
+<script src="tailwind_config.js"></script>
+</body>
+</html>
