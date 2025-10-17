@@ -9,6 +9,7 @@
 ```
 ToDoList/
 ├── index.html # Главная страница приложения
+├── src/ # Исходные файлы
 ├── css/ # Стили проекта
 ├── js/ # JavaScript файлы
 │ ├── script.js 
