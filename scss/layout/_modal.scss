@@ -13,16 +13,25 @@
   justify-content: center;
   align-items: center;
 
+  @include respond-to(tablet) {
+    width: 100%;
+    padding: $spacing-xl;
+  }
 
 }
 
 .modal-content {
   background-color: var(--color-primary);
   margin: $spacing-md auto;
-  padding: $spacing-xl;
+  padding: $spacing-md;
   border-radius: $border-radius;
-  max-width: 500px;
+
   position: relative;
+  width: 100%;
+  max-width: 500px;
+  @include respond-to(mobile) {
+    max-width: 100%;
+  }
 
 
 }
@@ -50,4 +59,14 @@
 .input-group {
   display: flex;
   gap: $spacing-sm;
+  @include respond-to(tablet) {
+    @include flex-center(column, $spacing-xs);
+  }
+  #addButton{
+      width: 25%;
+      @include respond-to(mobile) {
+        width: 100%;
+      }
+
+  }
 }

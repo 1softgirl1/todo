@@ -230,14 +230,26 @@ input[type=checkbox]:checked {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 900px) {
+  .modal {
+    width: 100%;
+    padding: 2rem;
+  }
+}
 
 .modal-content {
   background-color: var(--color-primary);
   margin: 1rem auto;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 10px;
-  max-width: 500px;
   position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+@media (max-width: 600px) {
+  .modal-content {
+    max-width: 100%;
+  }
 }
 
 .modal-header {
@@ -262,6 +274,23 @@ input[type=checkbox]:checked {
 .input-group {
   display: flex;
   gap: 0.8rem;
+}
+@media (max-width: 900px) {
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+.input-group #addButton {
+  width: 25%;
+}
+@media (max-width: 600px) {
+  .input-group #addButton {
+    width: 100%;
+  }
 }
 
 .tasksContainer {
