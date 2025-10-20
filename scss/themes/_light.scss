@@ -1,0 +1,40 @@
+@import '../utils/variables';
+
+:root {
+  --color-primary: #{$secondary-color};
+  --color-secondary: #{$accent-hover};
+  --color-accent: #{$accent-color};
+  --color-accent-hover: #{$accent-hover};
+  --color-success: #{$success-color};
+  --color-background: #{$background-light};
+  --color-shadow: #{$shadow-color};
+  --color-modal-overlay: #{$modal-overlay};
+  --color-text-muted: #{$accent-hover};
+
+  --font-primary: #{$font-primary};
+
+  --font-weight-normal: #{$font-weight-normal};
+
+  --font-size-base: #{$font-size-base};
+  --font-size-xs: #{$font-size-xs};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-xxl: #{$font-size-xxl};
+
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+  --spacing-4xl: #{$spacing-4xl};
+
+  --border-radius: #{$border-radius};
+
+  --breakpoint-mobile: #{$breakpoint-mobile};
+  --breakpoint-tablet: #{$breakpoint-tablet};
+  --breakpoint-desktop: #{$breakpoint-desktop};
+
+  --icon-theme: url(#{$moon});
+
+}

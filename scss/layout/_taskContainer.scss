@@ -1,0 +1,44 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.tasksContainer {
+  color: var(--color-accent);
+  width: 100%;
+  max-width: 500px;
+  @include flex-center(column);
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond-to(tablet) {
+    width: 100%;
+    max-width: 432px;
+  }
+
+  @include respond-to(mobile) {
+    width: 100%;
+    max-width: 320px;
+    padding-inline: 5px;
+  }
+}
+
+.tasks {
+  width: 100%;
+  max-width: 500px;
+  padding-bottom: $spacing-md;
+  padding-top: $spacing-md;
+  @include flex-center(column, $spacing-sm);
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond-to(tablet) {
+    width: 100%;
+    max-width: 432px;
+  }
+
+  @include respond-to(mobile) {
+    width: 100%;
+    max-width: 320px;
+  }
+}

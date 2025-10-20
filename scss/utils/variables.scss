@@ -1,0 +1,60 @@
+// Цвета
+$primary-color: #3E1671;
+$secondary-color: #ffffff;
+$accent-color: #9E78CF;
+$accent-hover: rgba(62, 22, 113, 0.75);
+$success-color: #78CFB0;
+$background-light: #f2ecf8;
+
+$shadow-color: rgba(0, 0, 0, 0.1);
+$modal-overlay: rgba(0, 0, 0, 0.5);
+$text-muted: #999;
+
+// Типографика
+$font-primary: 'Inter', sans-serif;
+$font-weight-normal: 400;
+
+// Размеры шрифтов
+$font-size-base: 1rem;
+$font-size-xs: 0.8rem;
+$font-size-sm: 0.9rem;
+$font-size-lg: 1.1rem;
+$font-size-xl: 1.05rem;
+$font-size-xxl: 0.95rem;
+
+// Отступы
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.8rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-4xl: 4rem;
+
+// Размеры
+$border-radius: 10px;
+
+
+// Тени
+$shadow-light: 0 1px 3px $shadow-color;
+$shadow-medium: 0 2px 5px $shadow-color;
+$shadow-heavy: 0 5px 15px $shadow-color;
+
+// Анимации
+$transition-fast: 0.3s ease;
+$transition-medium: 0.4s ease;
+$transition-slow: 0.8s ease;
+$transition-slower: 1s ease-in-out;
+
+// Breakpoints
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Цвета для тёмной темы
+$dark-primary-color: #0D0714;
+$dark-secondary-color: #ffffff;
+$dark-accent-color:#9E78CF;
+$dark-background: #15101C;
+
+$moon: "/src/moon.png";
+$sun: "/src/sun.png";

@@ -1,0 +1,23 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.task-card {
+  @include flex-center(row, $spacing-sm);
+  justify-content: space-between;
+  padding-inline: 20px;
+  height: 75px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  background-color: var(--color-background);
+  margin-bottom: 16px;
+
+}
+
+.task-card .done {
+  text-decoration: line-through;
+  color: var(--color-success);
+}
+
+
+
